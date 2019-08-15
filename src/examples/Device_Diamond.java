@@ -1,20 +1,27 @@
 package examples;
 
-import device.Printer;
-import device.Scanner;
+import device.ComboDevice;
+import device.ConcretePrinter;
+import device.ConcreteScanner;
 
 public class Device_Diamond {
 
 	public static void main(String[] args) {
 		
-		Printer printer = new Printer("1080");
+		ConcretePrinter printer = new ConcretePrinter("1080");
 		printer.processDoc("My letter");
 		printer.print("My letter says....");
 		
 		System.out.println();
-		Scanner scanner = new Scanner("2040");
+		ConcreteScanner scanner = new ConcreteScanner("2160");
 		scanner.processDoc("My email");
-		System.out.println("Scan result: "  +scanner.scan());
+		System.out.println("Scan result: " + scanner.scan());
+		
+		System.out.println();
+		ComboDevice comboDevice = new ComboDevice("4320");
+		comboDevice.processDoc("My dissertatiion");
+		comboDevice.print("My dissertation next");
+		System.out.println("Scan result : " + comboDevice.scan());
 		
 	}
 
