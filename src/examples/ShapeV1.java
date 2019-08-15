@@ -7,8 +7,8 @@ import java.util.Scanner;
 
 import entities.Circle;
 import entities.Rectangle;
-import entities.Shape;
 import entities.enums.Color;
+import model.entities.AbstractShape;
 
 public class ShapeV1 {
 
@@ -16,7 +16,7 @@ public class ShapeV1 {
 
 		Locale.setDefault(Locale.US);
 		Scanner sc = new Scanner(System.in);
-		List<Shape> list = new ArrayList<>();
+		List<AbstractShape> list = new ArrayList<>();//Somente a interface "Shape" nao da acesso a cor
 		
 		System.out.print("Enter the numbers of shape: ");
 		int n = sc.nextInt();
@@ -42,8 +42,9 @@ public class ShapeV1 {
 		
 		System.out.println();
 		System.out.println("SHAPE AREAS: ");
-		for (Shape shape : list) {
+		for (AbstractShape shape : list) {
 			System.out.println(String.format("%.2f", shape.area()));
+			System.out.println("Color: " + shape.getColor());
 		}
 		
 		sc.close();
