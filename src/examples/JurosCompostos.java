@@ -4,6 +4,8 @@ import java.util.Locale;
 import java.util.Scanner;
 
 import model.services.BrazilInterestService;
+import model.services.InterestService;
+import model.services.UsaInterestService;
 
 public class JurosCompostos {
 
@@ -19,11 +21,14 @@ public class JurosCompostos {
 		System.out.println("Interest rate: ");//Taxa de juros mensal
 		double interestRate = sc.nextDouble();
 		
-		BrazilInterestService bis = new BrazilInterestService(interestRate);
-		double payment = bis.payment(amount, months);
+		InterestService bis = new BrazilInterestService(interestRate * 2);
+		InterestService uis = new UsaInterestService(interestRate);
+		double brazilPayment = bis.payment(amount, months);
+		double usaPayment = uis.payment(amount, months);
 		
 		System.out.println("Payment after " + months + " months: ");
-		System.out.println(String.format("%.2f", payment));
+		System.out.println("Brazil -> " + String.format("%.2f", brazilPayment));
+		System.out.println("Usa -> " + String.format("%.2f", usaPayment));
 		
 		sc.close();
 	}
