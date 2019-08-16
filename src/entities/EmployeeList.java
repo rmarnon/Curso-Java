@@ -1,6 +1,6 @@
 package entities;
 
-public class EmployeeList {
+public class EmployeeList implements Comparable<EmployeeList>{
 
 	private Integer id;
 	private String name;
@@ -8,6 +8,11 @@ public class EmployeeList {
 
 	public EmployeeList() {
 
+	}
+
+	public EmployeeList(String name, Double salary) {
+		this.name = name;
+		this.salary = salary;
 	}
 
 	public EmployeeList(Integer id, String name, Double salary) {
@@ -31,6 +36,10 @@ public class EmployeeList {
 	public Double getSalary() {
 		return salary;
 	}
+	
+	public void setSalary(Double salary) {
+		this.salary = salary;
+	}
 
 	public void increaseSalary(Double percentage) {
 		salary += salary * percentage / 100;
@@ -40,4 +49,9 @@ public class EmployeeList {
 		return id + ", " + name + ", " + String.format("%.2f", salary);
 	}
 
+	@Override
+	public int compareTo(EmployeeList other) {
+		return -salary.compareTo(other.getSalary());
+	}
+	
 }

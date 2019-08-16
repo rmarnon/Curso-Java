@@ -1,3 +1,13 @@
-Good morning
-Good afternoon
-good evening
+Rodrigo Marnon,5200.00
+Aline Barros,2100.00
+Marli Conceicao,1000.00
+Alexandre Tavares,1500.00
+Carla Rodrigues,2400.00
+Bruce Dickson,10000.00
+Steve Harris,8000.00
+David gilmour,7000.00
+Lemmy kilmster,15000.00
+Axel Roses,5000.00
+Jonny Deep,120000.00
+Paul Dianno,4500.00
+Roger Flores,50000.00

@@ -4,7 +4,7 @@ import device.ComboDevice;
 import device.ConcretePrinter;
 import device.ConcreteScanner;
 
-public class Device_Diamond {
+public class Heranca_With_2Interfaces {
 
 	public static void main(String[] args) {
 		
@@ -21,8 +21,7 @@ public class Device_Diamond {
 		ComboDevice comboDevice = new ComboDevice("4320");
 		comboDevice.processDoc("My dissertatiion");
 		comboDevice.print("My dissertation next");
-		System.out.println("Scan result : " + comboDevice.scan());
-		
+		System.out.println("Scan result : " + comboDevice.scan());		
 	}
 
 }

@@ -1,6 +1,6 @@
 package device;
 
-public class ComboDevice extends Device implements Scanner, Printer {
+public class ComboDevice extends Device implements Scanner, Printer {//Pode implementar + interfaces
 
 	public ComboDevice(String serialNumber) {
 		super(serialNumber);
