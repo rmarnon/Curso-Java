@@ -1,6 +1,6 @@
 package entities;
 
-public class Product implements Comparable<Product>{
+public class Product implements Comparable<Product>{//Necessario para usar o metodo compareTo()
 
 	private String name;
 	private Double price;
@@ -59,21 +59,16 @@ public class Product implements Comparable<Product>{
 	}
 	
 	@Override
-	public int compareTo(Product other) {
+	public int compareTo(Product other) {//Necessario implementar a interface Comparable<>
 		return price.compareTo(other.getPrice());
 	}
 	
-	/*public String toString() {
-		return name + ", $ " + String.format("%.2f", price) + ", " + quantity
-					+ " units, Total: $ " + String.format("%.2f", totalValueInStock());
-	}*/
-	
 	@Override
 	public String toString() {
-		return name + "," + String.format("%.2f", price);
+		return name + ", $ " + String.format("%.2f", price) + ", " + quantity
+					+ " units, Total: $ " + String.format("%.2f", totalValueInStock());
 	}
 
-	
 }
 //this.quantity e' auto referencia para o objeto, que o chama, no caso seu o atributo "quantity"
 //(int quantity) -> parametro do metodo/funcao, "argumento quantity"

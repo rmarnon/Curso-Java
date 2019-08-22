@@ -13,9 +13,9 @@ public class CalculationService {//Nao esta parametrizada o tipo T, somente o me
 		if (list.isEmpty()) {
 			throw new IllegalStateException("List can't be empty");
 		}
-		T max = list.get(0);
-		for (T p : list) {
-			if (p.compareTo(max) > 0) {//Pra usar o metodo compareTo, deve especifica que T e Comparable
+		T max = list.get(0);//Variavel max do tipo "T"
+		for (T p : list) {//Pra usar o metodo compareTo, deve especificar que T eh do tipo Comparable
+			if (p.compareTo(max) > 0) {
 				max = p;
 			}
 		}

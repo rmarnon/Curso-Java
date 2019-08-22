@@ -31,7 +31,7 @@ public class ProductMostExpensive {
 				line = br.readLine();
 			}	
 			
-			Product x = CalculationService.max(list);
+			Product x = CalculationService.max(list);//Funcao estatica que calcula o maior valor
 			System.out.println("Most expensive: ");
 			System.out.println(x);
 			
