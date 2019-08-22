@@ -1,6 +1,6 @@
 package entities;
 
-public class Product {
+public class Product implements Comparable<Product>{
 
 	private String name;
 	private Double price;
@@ -58,10 +58,21 @@ public class Product {
 		return name + " $ " + String.format("%.2f", price);
 	}
 	
-	public String toString() {
+	@Override
+	public int compareTo(Product other) {
+		return price.compareTo(other.getPrice());
+	}
+	
+	/*public String toString() {
 		return name + ", $ " + String.format("%.2f", price) + ", " + quantity
 					+ " units, Total: $ " + String.format("%.2f", totalValueInStock());
+	}*/
+	
+	@Override
+	public String toString() {
+		return name + "," + String.format("%.2f", price);
 	}
+
 	
 }
 //this.quantity e' auto referencia para o objeto, que o chama, no caso seu o atributo "quantity"
