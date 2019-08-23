@@ -19,7 +19,7 @@ public class CuringaDelimitadores {
 		
 	}
 	
-	//Lista de origem e de qualquer tipo numerico, por isso ela extends Number "COVARIANCIA" ->
+	//Lista de origem "source" eh de qualquer tipo numerico, por isso ela extends Number "COVARIANCIA"->
 	//Subtipos, entao pode acessar os elementos
 	//Lista de destino pode ser mais generica que Number "CONTRAVARIANCIA" -> supertipos, pode Add
 	//Eh uma lista de qualquer tipo que pode ser um supertipo de Number
@@ -29,7 +29,7 @@ public class CuringaDelimitadores {
 		}
 	}
 	
-	public static void printList(List<?> list) {
+	public static void printList(List<?> list) {//Recebe uma lista de qualquer tipo
 		for (Object obj : list) {
 			System.out.print(obj + " ");
 		}
