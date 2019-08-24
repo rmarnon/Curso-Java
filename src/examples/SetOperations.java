@@ -21,7 +21,7 @@ public class SetOperations {
 		tree.add("3 - Xbox");
 		tree.add("1 - Notebook");
 		
-		Set<String> linked = new LinkedHashSet<>();//Mantem a ordem em que os 	elementos foram inseridos
+		Set<String> linked = new LinkedHashSet<>();//Mantem a ordem em que os elementos foram inseridos
 
 		linked.add("2 - PS4");
 		linked.add("3 - Xbox");
