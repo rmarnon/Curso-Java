@@ -14,28 +14,28 @@ public class MapVotes {
 		
 		try (BufferedReader br = new BufferedReader(new FileReader(path))) {
 			
-			Map<String, Integer> votes = new TreeMap<>();
+			Map<String, Integer> map = new TreeMap<>();
 			
 			String line = br.readLine();
 			
 			while (line != null) {
 				String[] fields = line.split(",");
-				String name = fields[0];
+				String nameKey = fields[0];
 				Integer quantity = Integer.parseInt(fields[1]);
 				
-				if (votes.containsKey(name) == true) {
-					int tot = votes.get(name) + quantity;
-					votes.put(name, tot);
+				if (map.containsKey(nameKey) == true) {
+					int tot = map.get(nameKey) + quantity;
+					map.put(nameKey, tot);
 				}
 				else {
-					votes.put(name, quantity);
+					map.put(nameKey, quantity);
 				}
 				
 				line = br.readLine();				
 			}
 			
-			for (String p : votes.keySet()) {
-				System.out.println( p + ", " + votes.get(p));
+			for (String key : map.keySet()) {
+				System.out.println(key + ", " + map.get(key));
 			}
 			
 		}
@@ -43,5 +43,4 @@ public class MapVotes {
 			System.out.println("Error: " + e.getMessage());
 		}
 	}
-
 }
