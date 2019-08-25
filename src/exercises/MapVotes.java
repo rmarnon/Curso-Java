@@ -6,8 +6,6 @@ import java.io.IOException;
 import java.util.Map;
 import java.util.TreeMap;
 
-import entities.Political;
-
 public class MapVotes {
 
 	public static void main(String[] args) {		
@@ -16,7 +14,7 @@ public class MapVotes {
 		
 		try (BufferedReader br = new BufferedReader(new FileReader(path))) {
 			
-			Map<Political, Integer> votes = new TreeMap<>();
+			Map<String, Integer> votes = new TreeMap<>();
 			
 			String line = br.readLine();
 			
@@ -24,26 +22,20 @@ public class MapVotes {
 				String[] fields = line.split(",");
 				String name = fields[0];
 				Integer quantity = Integer.parseInt(fields[1]);
-		
-				Political political = new Political(name, quantity);
 				
-				if (votes == null) {
-					votes.put(political, quantity);
-				}
-				
-				if (votes.containsKey(political) == true) {
-					political.totVotes(quantity);
-					votes.put(political, political.getQuantity());
+				if (votes.containsKey(name) == true) {
+					int tot = votes.get(name) + quantity;
+					votes.put(name, tot);
 				}
 				else {
-					votes.put(political, quantity);
+					votes.put(name, quantity);
 				}
 				
 				line = br.readLine();				
 			}
 			
-			for (Political p : votes.keySet()) {
-				System.out.println(p);
+			for (String p : votes.keySet()) {
+				System.out.println( p + ", " + votes.get(p));
 			}
 			
 		}
