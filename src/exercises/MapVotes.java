@@ -23,7 +23,7 @@ public class MapVotes {
 				String nameKey = fields[0];
 				Integer quantity = Integer.parseInt(fields[1]);
 				
-				if (map.containsKey(nameKey) == true) {
+				if (map.containsKey(nameKey)) {
 					int tot = map.get(nameKey) + quantity;
 					map.put(nameKey, tot);
 				}
