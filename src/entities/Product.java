@@ -1,6 +1,10 @@
 package entities;
 
-public class Product implements Comparable<Product>{//Necessario para usar o metodo compareTo()
+import java.util.function.Predicate;
+
+public class Product implements Predicate<Product>, Comparable<Product>{
+	//Comparable usado p implementar o compareTo()
+	//Predicate necessario para usar o test()
 
 	private String name;
 	private Double price;
@@ -61,6 +65,19 @@ public class Product implements Comparable<Product>{//Necessario para usar o met
 	@Override
 	public int compareTo(Product other) {//Necessario implementar a interface Comparable<>
 		return name.toUpperCase().compareTo(other.getName().toUpperCase());
+	}
+	
+	public static boolean staticProductpredicate(Product p) {//Reference methos c/ Static
+		return p.getPrice() >= 100;
+	}
+	
+	public boolean nonStaticProductpredicate() {//reference methods s/ Static
+		return getPrice() >= 100;
+	}
+	
+	@Override
+	public boolean test(Product p) {//Necessario para usar o Predicate<>
+		return p.getPrice() >= 100;
 	}
 	
 	@Override

@@ -11,7 +11,7 @@ public class ComparatorInterfaceFunction {
 
 	public static void main(String[] args) {
 
-List<Product> list = new ArrayList<>();
+		List<Product> list = new ArrayList<>();
 		
 		list.add(new Product("PS4", 1500.00));
 		list.add(new Product("Xbox", 1200.00));
