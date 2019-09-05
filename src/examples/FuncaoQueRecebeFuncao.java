@@ -23,7 +23,7 @@ public class FuncaoQueRecebeFuncao {
 		
 		ProductService ps = new ProductService();
 		
-		double sum = ps.filteredSum(list, p -> p.getName().charAt(0) == 'P');
+		double sum = ps.filteredSum(list, p -> p.getPrice() > 1000);
 		
 		System.out.println("Sum: " + String.format("%.2f", sum));
 
