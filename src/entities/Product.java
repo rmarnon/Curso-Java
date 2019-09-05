@@ -1,10 +1,7 @@
 package entities;
 
-import java.util.function.Predicate;
-
-public class Product implements Predicate<Product>, Comparable<Product>{
+public class Product implements Comparable<Product>{
 	//Comparable usado p implementar o compareTo()
-	//Predicate necessario para usar o test()
 
 	private String name;
 	private Double price;
@@ -67,19 +64,30 @@ public class Product implements Predicate<Product>, Comparable<Product>{
 		return name.toUpperCase().compareTo(other.getName().toUpperCase());
 	}
 	
-	public static boolean staticProductpredicate(Product p) {//Reference methos c/ Static
+	public static boolean staticProductPredicate(Product p) {//Predicate Reference metho c/ Static
 		return p.getPrice() >= 100;
 	}
 	
-	public boolean nonStaticProductpredicate() {//reference methods s/ Static
+	public boolean nonStaticProductpredicate() {//Predicate method s/ Static
 		return getPrice() >= 100;
 	}
 	
-	@Override
-	public boolean test(Product p) {//Necessario para usar o Predicate<>
-		return p.getPrice() >= 100;
+	public static void staticPriceUpdate(Product p) {//Consumer method with static
+		p.setPrice(p.getPrice() * 1.1);
 	}
 	
+	public static String staticUpperCaseName(Product p) {//Function method w/ static
+		return p.getName().toUpperCase();
+	}
+	
+	public String nonStaticUpperCaseName() {// Function s/ static
+		return name.toUpperCase();
+	}
+	
+	public void nonStaticProductUpdate() {//Consumer method sem static
+		price *= 1.2; //Opcional, pois esta trabalhando na propria classe (^ 20%)
+	}
+
 	@Override
 	public int hashCode() {
 		final int prime = 31;

@@ -5,6 +5,7 @@ import java.util.List;
 import java.util.function.Predicate;
 
 import entities.Product;
+import util.MyPredicate;
 
 public class InterfaceFuncional {
 
@@ -26,7 +27,7 @@ public class InterfaceFuncional {
 		
 		Predicate<Product> pred2 = p -> p.getPrice() >= 100;
 		
-		//list.removeIf(new Product());//Poderia ser uma classe aparte que implementa o Predicate<>
+		//list.removeIf(new Mypredicate());//Classe que implementa o Predicate<>
 		//list.removeIf(pred);//Utilizando a interface funcional c/ expressao regular
 		//list.removeIf(Product::nonStaticProductpredicate);//Reference methods S/ Static
 		//list.removeIf(Product::staticProductpredicate);//reference methods C/ static
