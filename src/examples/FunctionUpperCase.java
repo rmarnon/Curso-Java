@@ -18,7 +18,7 @@ public class FunctionUpperCase {
 		list.add(new Product("Teclado", 100.00));
 		list.add(new Product("Monitor", 800.00));
 		
-		Function<Product, String> fun = p -> p.getName().toUpperCase();
+		Function<Product, String> fun = p -> p.getName().toUpperCase();// Expressao lambda declarada
 		
 		List<String> names = list.stream().map(new UpperCaseName()).collect(Collectors.toList());
 		List<String> names1 = list.stream().map(Product::staticUpperCaseName).collect(Collectors.toList());
@@ -32,7 +32,6 @@ public class FunctionUpperCase {
 		//names3.forEach(System.out::println); //Expressao lambda declarada
 		names4.forEach(System.out::println); //Expressao lambda in line
 		
-
 	}
 
 }
