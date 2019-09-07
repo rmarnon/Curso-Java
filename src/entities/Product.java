@@ -119,12 +119,18 @@ public class Product implements Comparable<Product>{
 		return true;
 	}
 
-	@Override
-	public String toString() {
+	/*
+	 *  @Override
+		public String toString() {
 		return name + ", $ " + String.format("%.2f", price) + ", " + quantity
 					+ " units, Total: $ " + String.format("%.2f", totalValueInStock());
 	}
-
+	 */
+	
+	@Override
+	public String toString() {
+		return name + "," + String.format("%.2f", price);
+	}
 }
 //this.quantity e' auto referencia para o objeto, que o chama, no caso seu o atributo "quantity"
 //(int quantity) -> parametro do metodo/funcao, "argumento quantity"
