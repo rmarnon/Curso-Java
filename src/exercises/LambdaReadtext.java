@@ -32,15 +32,16 @@ public class LambdaReadtext {
 			}
 			
 			double avg = list.stream().map(p -> p.getPrice()).reduce(0.0, (x, y) -> x + y) / list.size();
+			//Map pra pegar apenas o preco e reduce pra soma-los
 			
 			System.out.println("Averege price: " + String.format("%.2f", avg));
 			
 			Comparator<String> comp = (s1, s2) -> s1.toUpperCase().compareTo(s2.toUpperCase());
 			
 			List<String> names = list.stream()
-					.filter(p -> p.getPrice() < avg)
-					.map(p -> p.getName())
-					.sorted(comp.reversed())
+					.filter(p -> p.getPrice() < avg)//Filtra precos < media
+					.map(p -> p.getName())//Pega o nome desses produtos com preco < media
+					.sorted(comp.reversed())//Ordena de forma invertida(decrescente)
 					.collect(Collectors.toList());
 						
 			names.forEach(System.out::println);

@@ -1,9 +1,5 @@
-TV,900.00
-Mouse,50.00
-Tablet,350.50
-HD Case,80.90
-Computer,850.00
-Monitor,290.00
-PS4,1200.00
-Xbox,900.00
-Switch,1500.00
+Maria,maria@gmail.com,3200.00
+Alex,alex@gmail.com,1900.00
+Marco,marco@gmail.com,1700.00
+Bob,bob@gmail.com,3500.00
+Anna,anna@gmail.com,2800.00

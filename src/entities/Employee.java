@@ -4,6 +4,7 @@ public class Employee {
 
 	private String name;
 	private Integer hours;
+	private String email;
 	private Double valuePerHour;
 	public double grossSalary;
 	public double tax;
@@ -16,6 +17,12 @@ public class Employee {
 		this.hours = hours;
 		this.valuePerHour = valuePerHour;
 	}
+	
+	public Employee(String name, String email, double grossSalary) {
+		this.name = name;
+		this.email = email;
+		this.grossSalary = grossSalary;
+	}
 
 	public String getName() {
 		return name;
@@ -23,6 +30,22 @@ public class Employee {
 
 	public void setName(String name) {
 		this.name = name;
+	}
+	
+	public String getEmail() {
+		return email;
+	}
+
+	public void setEmail(String email) {
+		this.email = email;
+	}
+
+	public double getGrossSalary() {
+		return grossSalary;
+	}
+
+	public void setGrossSalary(double grossSalary) {
+		this.grossSalary = grossSalary;
 	}
 
 	public Integer getHours() {
@@ -54,7 +77,7 @@ public class Employee {
 	}
 
 	public String toString() {
-		return "Employee: " + name + ", $ " + String.format("%.2f", netSalary());
+		return "Email: " + email;
 		
 	}
 
