@@ -27,7 +27,7 @@ public class Calendario {
 		
 		System.out.println(sdf.format(d));
 		System.out.println("Minutes: " + minutes);
-		System.out.println("Month: " + month); //Poderia ser somado 1 tbm na hora da impressao.
+		System.out.println("Month: " + month); //Poderia ser somado 1 tbm na hora da impressao no console.
 	}
 
 }
