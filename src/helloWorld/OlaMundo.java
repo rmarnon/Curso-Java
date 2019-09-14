@@ -6,7 +6,7 @@ public class OlaMundo {
 
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);	
-		System.out.println("Ola Mundo!");
+		System.out.println("Hello Fucking World!");
 		sc.close();
 	}
 	
