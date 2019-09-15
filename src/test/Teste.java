@@ -1,18 +1,21 @@
 package test;
 
-import java.awt.Rectangle;
-import java.util.Random;
-
 public class Teste {
 
 	public static void main(String[] args) {
 		
-		 Rectangle box = new Rectangle(5, 10, 20, 30);
-		 
-		 
-		 double x = 0.5;
-		 
-		 double d = x;
-		 System.out.println("Expected: " + x); 
+		Conta a = new Conta();
+		Conta b = new Conta();
+		
+		a.setSaldo(1000.00);
+		b.setSaldo(1000.00);
+		
+		a.transferencia(b, 250);
+		
+		System.out.println("Saldo conta A: " + a.getSaldo());
+		System.out.println("Expected: 745");
+		System.out.println("Saldo conta B: " + b.getSaldo());
+		System.out.println("Expected: 1250");
+		
 	}
 }
