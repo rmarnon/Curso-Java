@@ -39,6 +39,6 @@ public class Conta {
 	public void transferencia(Conta destino, double quantia) {
 		saldo -= quantia;
 		destino.saldo += quantia;
-		taxa();
+		taxa();//Debita uma taxa pra cada operacao de tranferencia
 	}
 }
