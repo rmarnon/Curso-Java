@@ -9,31 +9,44 @@ public class Conta {
 	
 	private static final double PIS = 5;
 	
-	private Double saldo;
+	private double saldo;
+	private double interest;
 	
+	public Conta(double interest, double saldoInicial) {
+		deposito(saldoInicial);
+		this.interest = interest;
+	}
+	
+	public Conta() {
+	}
+
 	/**
 	 * Obtem saldo atualizado da conta
 	 * @return saldo atual
 	 */
 	
-	public Double getSaldo() {
+	public double getSaldo() {
 		return saldo;
 	}
 
-	public void setSaldo(Double saldo) {
-		this.saldo = saldo;
-	}
-	
 	/**
 	 * Operacao de saque a partir da quantia informada
 	 * @param quantia que sera sacada
 	 */
 	public void saque(double quantia) {
-		this.saldo -= quantia;
+		saldo -= quantia;
+	}
+	
+	public void deposito(double quantia) {
+		saldo += quantia;
 	}
 
 	public void taxa() {
 		saque(PIS);
+	}
+	
+	public void addInterest() {
+		saldo += saldo * interest / 100;
 	}
 	
 	public void transferencia(Conta destino, double quantia) {
