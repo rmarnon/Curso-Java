@@ -4,14 +4,17 @@ public class Teste {
 
 	public static void main(String[] args) {
 		
-	Car car = new Car(50);
-	
-	car.addGas(20);
-	
-	car.dirigir(100);
-	car.dirigir(100);
-	
-	System.out.println(car.verificaCombustivel());
+		Bug b = new Bug(5);
 		
+		b.move();
+		b.move();
+		b.turn();
+		b.move();
+		b.move();
+		b.move();
+		b.turn();
+		b.move();
+		
+		System.out.println(b.getPosition());
 	}
 }
