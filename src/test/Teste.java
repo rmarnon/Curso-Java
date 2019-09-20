@@ -4,17 +4,26 @@ public class Teste {
 
 	public static void main(String[] args) {
 		
-		Bug b = new Bug(5);
+		Baratas b = new Baratas(10);
 		
-		b.move();
-		b.move();
-		b.turn();
-		b.move();
-		b.move();
-		b.move();
-		b.turn();
-		b.move();
+		b.breed();
+		b.spray();		
+		System.out.println("1 leva: " + String.format("%.2f", b.getRoaches()));
 		
-		System.out.println(b.getPosition());
+		b.breed();
+		b.spray();		
+		System.out.println("2 Leva " + String.format("%.2f", b.getRoaches()));
+		
+		b.breed();
+		b.spray();		
+		System.out.println("3 Leva " + String.format("%.2f", b.getRoaches()));
+		
+		b.breed();
+		b.spray();		
+		System.out.println("4 Leva " + String.format("%.2f", b.getRoaches()));
+		
+		b.breed();
+		b.spray();		
+		System.out.println("5 Leva " + String.format("%.2f", b.getRoaches()));
 	}
 }
