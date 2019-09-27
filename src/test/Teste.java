@@ -1,29 +1,29 @@
 package test;
 
+import java.util.Calendar;
+import java.util.Date;
+import java.util.GregorianCalendar;
+
 public class Teste {
 
 	public static void main(String[] args) {
+
+		GregorianCalendar cal = new GregorianCalendar(1982, Calendar.APRIL, 29);
+		GregorianCalendar cal1 = new GregorianCalendar(2019, Calendar.SEPTEMBER, 19);
 		
-		Baratas b = new Baratas(10);
+		cal1.add(Calendar.DAY_OF_MONTH, 100);
+		Date d = cal1.getTime();
+		System.out.println(d);
+		int week = cal1.get(Calendar.DAY_OF_WEEK);
+		System.out.println(week);
 		
-		b.breed();
-		b.spray();		
-		System.out.println("1 leva: " + String.format("%.2f", b.getRoaches()));
+		week = cal.get(Calendar.DAY_OF_WEEK);
+		System.out.println(week);
 		
-		b.breed();
-		b.spray();		
-		System.out.println("2 Leva " + String.format("%.2f", b.getRoaches()));
+		cal.add(Calendar.DAY_OF_WEEK, 10000);
+		d = cal.getTime();
+		System.out.println(d);
 		
-		b.breed();
-		b.spray();		
-		System.out.println("3 Leva " + String.format("%.2f", b.getRoaches()));
-		
-		b.breed();
-		b.spray();		
-		System.out.println("4 Leva " + String.format("%.2f", b.getRoaches()));
-		
-		b.breed();
-		b.spray();		
-		System.out.println("5 Leva " + String.format("%.2f", b.getRoaches()));
+	
 	}
 }
