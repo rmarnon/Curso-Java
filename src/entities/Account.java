@@ -25,7 +25,6 @@ public /*abstract*/ class Account { //Deixei comentado pra nao atrapalhar outros
 	}
 	
 	public Account(Integer number, String holder, double balance) {
-		super();
 		this.number = number;
 		this.holder = holder;
 		this.balance = balance;

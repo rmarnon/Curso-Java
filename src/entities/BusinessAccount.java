@@ -1,7 +1,5 @@
 package entities;
 
-import model.exceptions.DomainException;
-
 public final class  BusinessAccount extends Account{//Conta empresarial
 
 	private Double loanLimit;

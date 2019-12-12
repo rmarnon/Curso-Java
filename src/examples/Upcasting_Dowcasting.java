@@ -17,7 +17,7 @@ public class Upcasting_Dowcasting {
 		Account acc1 = bacc;
 		Account acc2 = new BusinessAccount(1003, "Joao", 0.0, 200.00);
 		Account acc3 = new SavingsAccount(1004, "Bob", 0.0, 0.01);
-
+		
 		// DOWNCASTING
 		
 		//BusinessAccount bcc = acc2; Gera erro ao tentar fazer direto, mesmo original sendo derivado
