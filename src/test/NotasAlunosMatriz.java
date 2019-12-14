@@ -42,12 +42,12 @@ public class NotasAlunosMatriz {
 		return maior;
 	}
 	
-	public double getMedia(int[] mediaParticular) {
+	public double getMedia(int[] notaAluno) {
 		int soma = 0;
-		for(int nota : mediaParticular) {
+		for(int nota : notaAluno) {
 			soma += nota;
 		}
-		return (double)soma / mediaParticular.length;
+		return (double)soma / notaAluno.length;
 	}
 	
 	public void saidaGraficaBarras() {
