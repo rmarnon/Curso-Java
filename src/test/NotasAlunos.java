@@ -78,7 +78,7 @@ public class NotasAlunos {
 		saidaComNotas();
 		System.out.println();
 		System.out.printf("Media da classe: %.2f%n", getMedia());
-		System.out.printf("A menor nota e: %d%nA Maior nora e: %d%n%n",getMenorNota(), getMaiorNota());
+		System.out.printf("A menor nota e: %d%nA Maior nota e: %d%n%n",getMenorNota(), getMaiorNota());
 		saidaGraficaBarras();
 	}
 }
