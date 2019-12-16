@@ -19,9 +19,7 @@ public class ThisTest {//Somente uma classe pode ser publica
 		
 		//Para usar construtores com This (Abaixo) deve se ter um com Parametros e This implementado (Esse).
 		public SimpleTime(int hora, int minuto, int segundo) {
-			if(hora < 0 || hora >= 24 
-						|| minuto < 0 || minuto >= 60 
-						|| segundo < 0 || segundo >= 60)  {
+			if(hora < 0 || hora >= 24 || minuto < 0 || minuto >= 60 || segundo < 0 || segundo >= 60)  {
 				throw new IllegalArgumentException("Valor(es) fornecido(s) fora da faixa permitida!");
 			}
 			this.hora = hora;
