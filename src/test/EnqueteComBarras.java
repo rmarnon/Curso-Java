@@ -17,6 +17,7 @@ public class EnqueteComBarras {
 				System.out.printf("   Resposta[%d] = %d%n%n", resposta, notasDadas[resposta]);
 			}
 		}
+		
 		 System.out.printf("%s%12s%n", "Nota", "Frequencia");
 		 
 		 for (int nota = 0; nota < contador.length; nota++) {

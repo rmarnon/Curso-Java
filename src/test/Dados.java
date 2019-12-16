@@ -14,7 +14,7 @@ public class Dados {
 		
 		for(int i = 1; i <= 10000000; i++) {
 			
-			++frequency[1 + random.nextInt(6)];
+			frequency[1 + random.nextInt(6)]++;
 			
 			//-----------------------------------OU---------------------------------------
 		

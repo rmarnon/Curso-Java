@@ -1,9 +1,9 @@
 package examples;
 
-public class ArrayComprimentoVariavel {
+ public class ArrayComprimentoVariavel {
 	
-	public static double media(double... numbers) {//Reticencias aceita qualquer quantidade de parametros
-		double total = 0;
+	public static double media(double... numbers) {//Reticencias deve ser colocado por ultimo como argumento
+		double total = 0;							//Serve para aceitar qualquer quantidade de parametros
 		for(double d : numbers) {
 			total += d;
 		}
@@ -24,5 +24,5 @@ public class ArrayComprimentoVariavel {
 		System.out.printf("Media entre %s, %s, %s, %s e %s = %.2f%n", d1, d2, d3, d4,d5, media(d1, d2, d3, d4, d5));
 
 	}
-
-}
+	
+ }	
