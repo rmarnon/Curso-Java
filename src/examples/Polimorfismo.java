@@ -10,12 +10,16 @@ import entities.OutsourcedEmployee;
 
 public class Polimorfismo {
 
+	@SuppressWarnings({ "resource", "static-access" })
 	public static void main(String[] args) {
 		
 		Locale.setDefault(Locale.US);
 		Scanner sc = new Scanner(System.in);
 		List<Employee> list = new ArrayList<>();
+		Employee z = new Employee("Rodrigo", 12, 1200.00);
+		System.out.println("Contagem objeto - " + z.getCount());//Objeto chamando metodo estatico
 		
+		System.out.println("Iniciando contagem..." + Employee.getCount());//classe chamando metodo estatico
 		System.out.print("Enter the number of employees: ");
 		int n = sc.nextInt();
 		
@@ -35,16 +39,26 @@ public class Polimorfismo {
 				System.out.print("Aditional charge: ");
 				Double additionalCharge = sc.nextDouble();
 				list.add(new OutsourcedEmployee(name, hours, valuePerHour, additionalCharge));
+				System.out.println("Adicionando..." + Employee.getCount());
 			}
 			else {
 				list.add(new Employee(name, hours, valuePerHour));
+				System.out.println("Adicionando..." +Employee.getCount());
 			}
 		}
 		
-		System.out.println();
-		System.out.println("Payments: ");
-		for (Employee e : list) {
-			System.out.println(e.getName() + " - $ " + String.format("%.2f", e.payment()));
+		if(Employee.getCount() != 0) {
+			System.out.println();
+			System.out.println("Payments: ");
+			for (Employee e : list) {
+				System.out.println(e.getName() + " - $ " + String.format("%.2f", e.payment()));				
+			}
+			System.out.println("Contagem Final Employee.getCount = " + Employee.getCount());
+			System.out.println("Contagem Final z.getCount = " + z.getCount());
+			System.out.println("Ambos objeto e metodo compartilham o mesmo count static da classe Employee");
+		}
+		else {
+			throw new RuntimeException("Nao ha funcionarios cadastrados!");
 		}
 		
 		sc.close();

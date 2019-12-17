@@ -2,6 +2,7 @@ package entities;
 
 public class Employee {
 
+	private static int count = 0;
 	private String name;
 	private Integer hours;
 	private String email;
@@ -16,12 +17,18 @@ public class Employee {
 		this.name = name;
 		this.hours = hours;
 		this.valuePerHour = valuePerHour;
+		count++;
 	}
 	
 	public Employee(String name, String email, double grossSalary) {
 		this.name = name;
 		this.email = email;
 		this.grossSalary = grossSalary;
+		count++;
+	}
+	
+	public static int getCount() {
+		return count;
 	}
 
 	public String getName() {
