@@ -6,6 +6,7 @@ import java.util.stream.Collectors;
 
 public class Lista {
 
+	@SuppressWarnings("unlikely-arg-type")
 	public static void main(String[] args) {
 		
 		List<String> lista = new ArrayList<>();
@@ -21,6 +22,13 @@ public class Lista {
 		lista.add("Aline");
 		lista.add("Marli");
 		lista.add("Alex");
+		lista.contains("29");
+		lista.get(3);
+		lista.indexOf(3);
+		lista.lastIndexOf("29");
+		lista.lastIndexOf(0);
+		lista.size();
+		
 		
 		System.out.println("Quantidade do vetor: "+ lista.size()); //Imprime o tamanho da lista.
 						
@@ -68,6 +76,7 @@ public class Lista {
 		//se a lista for do tipo String, caso contratio nao funciona.
 		
 		System.out.println("Nome 1: " + name + " " + "Nome 2: " + name2);
+		lista.clear();
 	}
 
 }

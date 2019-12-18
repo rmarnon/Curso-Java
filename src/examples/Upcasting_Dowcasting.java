@@ -14,6 +14,7 @@ public class Upcasting_Dowcasting {
 		
 		// UPCASTING
 		
+		Account acc0 = sacc;
 		Account acc1 = bacc;
 		Account acc2 = new BusinessAccount(1003, "Joao", 0.0, 200.00);
 		Account acc3 = new SavingsAccount(1004, "Bob", 0.0, 0.01);
