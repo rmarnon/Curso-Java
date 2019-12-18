@@ -8,16 +8,8 @@ public class FuncionarioComissionados extends Empregado {
 	public FuncionarioComissionados(String nome, String sobrenome, String cpf, double vendasBrutas, 
 			double porcentagemDaComissao) {
 		super(nome, sobrenome, cpf);
-		
-		if(porcentagemDaComissao <= 0.0 || porcentagemDaComissao >= 1.0) {
-			throw new IllegalArgumentException("Porcentagem da comissao deve ser > 0.0 e < 1.0");
-		}
-		
-		if(vendasBrutas < 0) {
-			throw new IllegalArgumentException("Vendas brutas deve ser >= 0.0");
-		}
-		this.vendasBrutas = vendasBrutas;
-		this.porcentagemDaComissao = porcentagemDaComissao;
+		setVendasBrutas(vendasBrutas);
+		setPorcentagemDaComissao(porcentagemDaComissao);
 	}
 	
 	public double getVendasBrutas() {

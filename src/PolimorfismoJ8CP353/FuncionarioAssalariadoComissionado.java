@@ -7,11 +7,7 @@ public class FuncionarioAssalariadoComissionado extends FuncionarioComissionados
 	public FuncionarioAssalariadoComissionado(String nome, String sobrenome, String cpf, double vendasBrutas,
 			double porcentagemDaComissao, double salarioBase) {
 		super(nome, sobrenome, cpf, vendasBrutas, porcentagemDaComissao);
-		
-		if(salarioBase < 0.0) {
-			throw new IllegalArgumentException("Salario base deve ser >= 0.0");
-		}
-		this.salarioBase = salarioBase;
+		setSalarioBase(salarioBase);
 	}
 	
 	public double getSalarioBase() {

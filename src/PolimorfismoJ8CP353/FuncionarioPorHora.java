@@ -7,16 +7,8 @@ public class FuncionarioPorHora extends Empregado {
 	
 	public FuncionarioPorHora(String nome, String sobrenome, String cpf, double salario, double horas) {
 		super(nome, sobrenome, cpf);
-		
-		if(salario < 0.0) {
-			throw new IllegalArgumentException("Remuneracao deve ser >= 0.0");
-		}
-		
-		 if ((horas < 0.0) || (horas > 168.0)) {
-			 throw new IllegalArgumentException("Horas trabalhadas deve ser >= 0.0 e <= 168.0");
-		 }		 
-		this.salario = salario;
-		this.horas = horas;
+		setSalario(salario);
+		setHoras(horas);
 	}
 	
 	public double getSalario() {

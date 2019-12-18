@@ -5,12 +5,8 @@ public class FuncionarioAssalariado extends Empregado {
 	private double salarioSemanal;
 
 	public FuncionarioAssalariado(String nome, String sobrenome, String cpf, double salarioSemanal) {
-		super(nome, sobrenome, cpf);
-		
-		if(salarioSemanal < 0.0) {
-			throw new IllegalArgumentException("Salario semanal deve ser >= 0.0");
-		}
-		this.salarioSemanal = salarioSemanal;
+		super(nome, sobrenome, cpf);		
+		setSalarioSemanal(salarioSemanal);
 	}
 	
 	public double getSalarioSemanal() {

@@ -27,6 +27,7 @@ public class EmpregadoTeste {
 		System.out.printf("%n%s%n%s: R$%,.2f%n", funcionario4, "Ganhou", funcionario4.ganho());
 		
 		System.out.println("----------------------------------------------------------------------------");
+		System.out.println("Empregados processados polimorficamente:\n");
 		
 		List<Empregado> empregados = new ArrayList<>();
 		empregados.addAll(Arrays.asList(funcionario1, funcionario2, funcionario3, funcionario4));
