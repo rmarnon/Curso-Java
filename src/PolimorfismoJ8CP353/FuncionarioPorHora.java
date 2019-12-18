@@ -15,7 +15,7 @@ public class FuncionarioPorHora extends Empregado {
 		return salario;
 	}
 	
-	public void setSalario(double salario) {
+	public final void setSalario(double salario) {
 		if(salario < 0.0) {
 			throw new IllegalArgumentException("Remuneracao deve ser >= 0.0");
 		}
@@ -26,7 +26,7 @@ public class FuncionarioPorHora extends Empregado {
 		return horas;
 	}
 	
-	public void setHoras(double horas) {
+	public final void setHoras(double horas) {
 		if ((horas < 0.0) || (horas > 168.0)) {
 			 throw new IllegalArgumentException("Horas trabalhadas deve ser >= 0.0 e <= 168.0");
 		 }		 

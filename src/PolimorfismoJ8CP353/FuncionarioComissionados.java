@@ -16,7 +16,7 @@ public class FuncionarioComissionados extends Empregado {
 		return vendasBrutas;
 	}
 	
-	public void setVendasBrutas(double vendasBrutas) {
+	public final void setVendasBrutas(double vendasBrutas) {
 		if(vendasBrutas < 0) {
 			throw new IllegalArgumentException("Vendas brutas deve ser >= 0.0");
 		}
@@ -27,7 +27,7 @@ public class FuncionarioComissionados extends Empregado {
 		return porcentagemDaComissao;
 	}
 	
-	public void setPorcentagemDaComissao(double porcentagemDaComissao) {
+	public final void setPorcentagemDaComissao(double porcentagemDaComissao) {
 		if(porcentagemDaComissao <= 0.0 || porcentagemDaComissao >= 1.0) {
 			throw new IllegalArgumentException("Porcentagem da comissao deve ser > 0.0 e < 1.0");
 		}

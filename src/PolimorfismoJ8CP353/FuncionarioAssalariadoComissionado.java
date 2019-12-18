@@ -14,7 +14,7 @@ public class FuncionarioAssalariadoComissionado extends FuncionarioComissionados
 		return salarioBase;
 	}
 	
-	public void setSalarioBase(double salarioBase) {
+	public final void setSalarioBase(double salarioBase) {
 		if(salarioBase < 0.0) {
 			throw new IllegalArgumentException("Salario base deve ser >= 0.0");
 		}

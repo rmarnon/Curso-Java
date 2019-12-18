@@ -13,7 +13,7 @@ public class FuncionarioAssalariado extends Empregado {
 		return salarioSemanal;
 	}
 	
-	public void setSalarioSemanal(double salarioSemanal) {
+	public final void setSalarioSemanal(double salarioSemanal) {
 		if(salarioSemanal < 0.0) {
 			throw new IllegalArgumentException("Salario semanal deve ser >= 0.0");
 		}

@@ -20,17 +20,21 @@ public class EmpregadoTeste {
 		FuncionarioAssalariadoComissionado funcionario4 = new FuncionarioAssalariadoComissionado(
 				"Karina", "Lago", "987654321-0", 5000.00, 0.04, 300.00);
 		
+		FuncionarioAssalariadoComissionado funcionario5 = new FuncionarioAssalariadoComissionado(
+				"Mayko", "Cunha", "789456123-0", 7000.00, 0.05, 500.00);
+		
 		System.out.println("Empregados processados individualmente:");
 		System.out.printf("%n%s%n%s: R$%,.2f%n", funcionario1, "Ganhou", funcionario1.ganho());
 		System.out.printf("%n%s%n%s: R$%,.2f%n", funcionario2, "Ganhou", funcionario2.ganho());
 		System.out.printf("%n%s%n%s: R$%,.2f%n", funcionario3, "Ganhou", funcionario3.ganho());
 		System.out.printf("%n%s%n%s: R$%,.2f%n", funcionario4, "Ganhou", funcionario4.ganho());
+		System.out.printf("%n%s%n%s: R$%,.2f%n", funcionario5, "Ganhou", funcionario5.ganho());
 		
 		System.out.println("----------------------------------------------------------------------------");
 		System.out.println("Empregados processados polimorficamente:\n");
 		
 		List<Empregado> empregados = new ArrayList<>();
-		empregados.addAll(Arrays.asList(funcionario1, funcionario2, funcionario3, funcionario4));
+		empregados.addAll(Arrays.asList(funcionario1, funcionario2, funcionario3, funcionario4, funcionario5));
 		
 		for(Empregado empregado : empregados) {
 			System.out.println(empregado);
@@ -48,5 +52,4 @@ public class EmpregadoTeste {
 			System.out.println(n.substring(20));
 		}
 	}
-
 }
