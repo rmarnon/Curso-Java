@@ -32,9 +32,9 @@ public class FuncionarioPorHora extends Empregado {
 		 }		 
 		this.horas = horas;
 	}
-	
+
 	@Override
-	public double ganho() {
+	public double getCalculaPagamento() {
 		if(horas <= 40) {
 			return getHoras() * getSalario();
 		}

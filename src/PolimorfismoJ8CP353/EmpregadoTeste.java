@@ -24,11 +24,11 @@ public class EmpregadoTeste {
 				"Mayko", "Cunha", "789456123-0", 7000.00, 0.05, 500.00);
 		
 		System.out.println("Empregados processados individualmente:");
-		System.out.printf("%n%s%n%s: R$%,.2f%n", funcionario1, "Ganhou", funcionario1.ganho());
-		System.out.printf("%n%s%n%s: R$%,.2f%n", funcionario2, "Ganhou", funcionario2.ganho());
-		System.out.printf("%n%s%n%s: R$%,.2f%n", funcionario3, "Ganhou", funcionario3.ganho());
-		System.out.printf("%n%s%n%s: R$%,.2f%n", funcionario4, "Ganhou", funcionario4.ganho());
-		System.out.printf("%n%s%n%s: R$%,.2f%n", funcionario5, "Ganhou", funcionario5.ganho());
+		System.out.printf("%n%s%n%s: R$%,.2f%n", funcionario1, "Ganhou", funcionario1.getCalculaPagamento());
+		System.out.printf("%n%s%n%s: R$%,.2f%n", funcionario2, "Ganhou", funcionario2.getCalculaPagamento());
+		System.out.printf("%n%s%n%s: R$%,.2f%n", funcionario3, "Ganhou", funcionario3.getCalculaPagamento());
+		System.out.printf("%n%s%n%s: R$%,.2f%n", funcionario4, "Ganhou", funcionario4.getCalculaPagamento());
+		System.out.printf("%n%s%n%s: R$%,.2f%n", funcionario5, "Ganhou", funcionario5.getCalculaPagamento());
 		
 		System.out.println("----------------------------------------------------------------------------");
 		System.out.println("Empregados processados polimorficamente:\n");
@@ -44,7 +44,7 @@ public class EmpregadoTeste {
 				funcionario.setSalarioBase(1.10 * funcionario.getSalarioBase());
 				System.out.printf("Novo salario c/ 10%% de reajuste eh: R$%,.2f%n", funcionario.getSalarioBase());
 			}
-			System.out.printf("Ganhou R$%,.2f%n%n", empregado.ganho());
+			System.out.printf("Ganhou R$%,.2f%n%n", empregado.getCalculaPagamento());
 		}
 		for(int contador = 0; contador < empregados.size(); contador++) {
 			System.out.printf("Empregado %d eh um ", 1 + contador);

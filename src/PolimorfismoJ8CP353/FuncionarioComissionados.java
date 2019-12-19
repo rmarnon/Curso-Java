@@ -35,7 +35,7 @@ public class FuncionarioComissionados extends Empregado {
 	}
 	
 	@Override
-	public double ganho() {
+	public double getCalculaPagamento() {
 		return getPorcentagemDaComissao() * getVendasBrutas();
 	}
 	
@@ -45,5 +45,5 @@ public class FuncionarioComissionados extends Empregado {
 				"Funcionario comissionado", super.toString(),
 				"Vendas brutas", getVendasBrutas(),
 				"Taxa de comissao", getPorcentagemDaComissao());
-	}	
+	}
 }

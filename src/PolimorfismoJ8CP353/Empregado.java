@@ -1,6 +1,6 @@
 package PolimorfismoJ8CP353;
 
-public abstract class Empregado {
+public abstract class Empregado implements Pagamento {
 
 	private final String nome;
 	private final String sobrenome;
@@ -28,6 +28,4 @@ public abstract class Empregado {
 	public String toString() {
 		return String.format("%s %s%nCPF: %s", getNome(), getSobrenome(), getCpf());
 	}
-	
-	public abstract double ganho();
 }

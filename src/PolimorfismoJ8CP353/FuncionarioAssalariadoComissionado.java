@@ -22,8 +22,8 @@ public class FuncionarioAssalariadoComissionado extends FuncionarioComissionados
 	}
 	
 	@Override
-	public double ganho() {
-		return super.ganho() + getSalarioBase();
+	public double getCalculaPagamento() {
+		return super.getCalculaPagamento() + getSalarioBase();
 	}
 	
 	@Override

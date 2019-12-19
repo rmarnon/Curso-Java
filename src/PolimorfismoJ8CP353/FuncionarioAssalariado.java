@@ -21,7 +21,7 @@ public class FuncionarioAssalariado extends Empregado {
 	}
 	
 	@Override
-	public double ganho() {
+	public double getCalculaPagamento() {
 		return getSalarioSemanal();
 	}
 	
