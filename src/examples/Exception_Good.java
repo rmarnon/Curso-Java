@@ -17,7 +17,10 @@ public class Exception_Good {
 	public static void main(String[] args) {
 
 		Scanner sc = new Scanner(System.in);
+		boolean continua = true;
 		
+	do {
+			
 		try {
 			
 			SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
@@ -41,19 +44,25 @@ public class Exception_Good {
 	
 			reservation.updateDate(checkIn, checkOut);
 			System.out.println("reservation: " + reservation);
+			continua = false;
 		}
 		catch (ParseException e) {
-			System.out.println("Invalid date format");
+			System.out.println("Invalid date format" + e.getMessage());
+			System.out.println("Please, enter a valid date: ");
+			sc.nextLine();
 		}
 		catch (DomainException e) {
 			System.out.println("Error in reservation: " + e.getMessage());
 		}
 		catch (RuntimeException e) {
-			System.out.println("Unexpected error");
+			System.out.println("Unexpected error: " + e.getMessage());
+			System.out.printf("%s%n", "Please try again: ");
+			sc.nextLine();
 		}
+	} while(continua);
+	
+	sc.close();
 		
-		sc.close();
-
 	}
 
 }
