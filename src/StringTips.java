@@ -24,7 +24,7 @@ public class StringTips {
 		String[] s8 = {"iniciado", "iniciando", "finalizado", "finalizando"};
 		String s9 = "abcdefghijklmabcdefghijklm";
 		
-		//Copia do 5 ao 10 limitado a vetorVazio de 0-6
+		//Copia caracteres de uma String 's' "do 5 ao 10" p/ um arrayVazio iniciando no 0.
 		s.getChars(5, 11, arrayVazio, 0);
 		
 		System.out.println("S-" + s);
@@ -88,7 +88,7 @@ public class StringTips {
 		else
 			System.out.println("Primeiros 5 caracteres nao batem com CASE ignorado");
 		
-		//starWith, endsWith
+		//starWith, endsWith(So funciona com Strings, nao funciona com char)
 		for(String string : s8) {
 			if(string.startsWith("in")) {
 				System.out.println(string + " -> starsWith 'in'");

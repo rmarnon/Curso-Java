@@ -80,7 +80,7 @@ public class StringBuildersGeneral {
 		StringBuilder string2 = new StringBuilder();
 		string2.insert(0, s1);
 		string2.insert(0, " ");
-		string2.insert(1, c);
+		string2.insert(0, c);
 		string2.insert(0, " ");
 		string2.insert(0, obj);
 		string2.insert(0, " ");
