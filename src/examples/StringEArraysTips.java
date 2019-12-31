@@ -1,5 +1,8 @@
+package examples;
 
-public class StringTips {
+import java.util.Arrays;
+
+public class StringEArraysTips {
 
 	public static void main(String[] args) {
 		
@@ -7,6 +10,45 @@ public class StringTips {
 		
 		char[] array = {'O', 'l', 'a', ',', ' ', 'M', 'u', 'n', 'd', 'o'};
 		char[] arrayVazio = new char[6];
+		
+		double[] d = {3.4, 1.2, 5.7, 6.9, 9.1};	
+		Arrays.sort(d);//Ordena
+		
+		System.out.print("Ordenado: ");
+		for(double x : d) {
+			System.out.print(x + " ");
+		}
+		System.out.println();
+		
+		//Preenche elementos com elementos 7's
+		int[] elementos = new int[10];
+		Arrays.fill(elementos, 7);
+		
+		System.out.print("Preenchendo com 7's: ");
+		for(int sete : elementos) {
+			System.out.print(sete);
+		}
+		System.out.println();
+		
+		int[] array1 = {1, 2, 3, 4, 5, 6, 7, 8, 9, 0};
+		int[] copy = new int[array1.length];
+		System.arraycopy(array1, 0, copy, 0, array1.length);
+		//Copia do array1 partindo da posicao 0, para o copy, comecando no 0 e com tamanho array1
+		
+		System.out.print("Copia: ");
+		for(int copia : copy) {
+			System.out.print(copia + " ");
+		}
+		System.out.println();
+		
+		//Compara igualdade de arrays e retorn true or false
+		boolean b = Arrays.equals(array1, copy);
+		System.out.println("array1 equals copy? " + b);
+		
+		//Busca posicao em um array
+		int local = Arrays.binarySearch(array1, 5);
+		System.out.printf("Posicao do valor %d: %d" , 5,  local);
+		System.out.println();
 		
 		//Tipos de construtores
 		String s = "Ola, Mundo!";
@@ -23,6 +65,9 @@ public class StringTips {
 		
 		String[] s8 = {"iniciado", "iniciando", "finalizado", "finalizando"};
 		String s9 = "abcdefghijklmabcdefghijklm";
+		
+		String string1 = "Essa frase termina com 5 estrelas *****";
+		String string2 = "1, 2, 3, 4, 5, 6, 7, 8, 9";
 		
 		//Copia caracteres de uma String 's' "do 5 ao 10" p/ um arrayVazio iniciando no 0.
 		s.getChars(5, 11, arrayVazio, 0);
@@ -99,7 +144,7 @@ public class StringTips {
 			if(string.startsWith("ali", 3)) {
 				System.out.println(string + " -> starsWith 'ali na posicao 3'");
 			}			
-		}
+		} 
 		
 		for(String string : s8) {
 			if(string.endsWith("ado")) {
@@ -115,6 +160,28 @@ public class StringTips {
 		System.out.println("\"def\" lastIndexOf " + s9.lastIndexOf("def"));
 		
 		System.out.println("S10.concat(S11) -> " + s10.concat(s11));
+		
+		//ReplaceAll
+		System.out.print("Original String1: " + string1 + "\n");
+		string1 = string1.replaceAll("\\*", "^");
+		System.out.println("^ substituindo *: " + string1);
+		string1 = string1.replaceAll("estrelas", "circunflexos");
+		System.out.println("\"circunflexos\" substituindo \"estrelas\": " + string1);
+		
+		//Substitui todas as palavras por "palavra \\w+"
+		System.out.println("Toda palavra substituida por \"Palavra\": " 
+				+ string1.replaceAll("\\w+", "Palavra"));
+		//Colocar '+' senao substitui toda letra por palavra nessa ER!!!
+		
+		System.out.print("Original String2: " + string2 + "\n");
+		
+		//Troca os 3 primeiros digitos por "Digito"
+		for(int i = 0; i < 3; i++) {
+			string2 = string2.replaceFirst("\\d", "Digito");
+		}
+		System.out.println("Tres primeiros digitos trocados por \"Digito\": " + string2);
+		String[] result = string2.split(",\\s*");//Divide em virgulas ','
+		System.out.println(Arrays.toString(result));//Exibe resultado da string entre []
 	}
 
 }

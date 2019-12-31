@@ -40,5 +40,11 @@ public class Program {
 		System.out.println(vect[3]);
 		System.out.println(vect[4]);
 		
+		System.out.println("\nOU\n");
+		
+		System.out.printf("Total de tokens/palavras: %d%nOs Tokens sao:%n", vect.length);
+		for(String tokens : vect) {			
+			System.out.println(tokens);
+		}		
 	}
 }
