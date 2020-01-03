@@ -1,6 +1,8 @@
 package examples;
 
 import java.util.Arrays;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 public class StringEArraysTips {
 
@@ -182,6 +184,34 @@ public class StringEArraysTips {
 		System.out.println("Tres primeiros digitos trocados por \"Digito\": " + string2);
 		String[] result = string2.split(",\\s*");//Divide em virgulas ','
 		System.out.println(Arrays.toString(result));//Exibe resultado da string entre []
+		
+		//ER que identifica aniversario "NAO" seja em Julho (1-6, 8-9) e nome comecado em 'R'.
+		//Metodo matches aceita uma String que especifica ER e uma CharSequence correspondente
+		//Retorna um boolean se o segundo argumento corresponde a ER
+		boolean q = Pattern.matches("R.*\\d\\d-\\d[1-68-9]-\\d\\d", "Ray 29-07-82");
+		boolean r = Pattern.matches("R.*\\d\\d-\\d[1-68-9]-\\d\\d", "Ray 29-04-82");
+		System.out.println("Matches Ray 07: " + q);
+		System.out.println("Matches Ray !07: " + r);
+		
+		//Se usada mais de 1 vez, usar metodo .compile p/ criar objeto Pattern especifico da ER
+		//Recebe uma String como padrao que especifica a ER
+		Pattern expressao = Pattern.compile("R.*\\d\\d-\\d[1-68-9]-\\d\\d");		
+		
+		//Ao usar o compile, certificar de haver + de 1 argumento na String como listado abaixo
+		String nomes = "Rodrigo nasceu em 29-04-82\n" 
+				+ "Gisely nasceu em 27-04-84\n" 
+				+ "Renata nasceu em 04-07-70\n"
+				+ "Roberval nasceu em 10-09-64\n";
+		
+		//O objeto Pattern gerado pode usar o metodo .matcher, que recebe uma CharSequence 
+		//E retorna um objeto do tipo Matcher
+		//Matcher tbm utiliza metodo .matches igual Pattern, porem sem argumentos
+		//Outros metodos Matcher -> find, lookingAt, replaceFirst e replaceAll
+		Matcher mat = expressao.matcher(nomes);
+		
+		while(mat.find()) {
+			System.out.println(mat.group());
+		}
 	}
 
 }
