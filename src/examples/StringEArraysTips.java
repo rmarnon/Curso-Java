@@ -209,8 +209,9 @@ public class StringEArraysTips {
 		//Outros metodos Matcher -> find, lookingAt, replaceFirst e replaceAll
 		Matcher mat = expressao.matcher(nomes);
 		
+		//o metodo lokingAt executa da mesma maneira, mas busca a primeira ocorrencia (! loop inf)
 		while(mat.find()) {
-			System.out.println(mat.group());
+			System.out.println(mat.group());//Retorna String objeto correspondente
 		}
 	}
 
