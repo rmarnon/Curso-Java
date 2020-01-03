@@ -32,11 +32,11 @@ public class CollectionTest {
 	//Tambem funciona passando List ao inves de Collection
 	public static void removendoCoresDaLista(Collection<String> c1, Collection<String> c2) {
 		
-		//Remove elementos na segunda colecao da primeira colecao ArrayList
-		Iterator<String> iterator = c1.iterator();
+		//Iterator remove elementos da colecao c1, que estejam declarados em c2
+		Iterator<String> iterator = c1.iterator();//Iterator e Collection sao interfaces genericas
 		
-		 while(iterator.hasNext())
-			 if(c2.contains(iterator.next()))
+		 while(iterator.hasNext())//Determina se existe mais elementos a iterar (True/False)
+			 if(c2.contains(iterator.next()))//Se c2 contem referencia de c1 iterado
 				 iterator.remove();
 	}
 }
