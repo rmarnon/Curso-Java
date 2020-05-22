@@ -13,7 +13,7 @@ public class Abstract_Class {
 
 		List<Account> list = new ArrayList<>();
 		
-		//Account acc1 = new Account(1001, "Alex", 1000.00);->Erro Nao pode instanciar classes abstracts
+		//Account acc1 = new Account(1001, "Alex", 1000.00);->Erro Nao pode instanciar classes abstract
 		
 		list.add(new SavingsAccount(1001, "Alex", 500.00, 0.01));
 		list.add(new SavingsAccount(1004, "Bob", 300.00, 0.01));
